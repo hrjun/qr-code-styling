@@ -126,7 +126,10 @@ export default class QRCodeStyling {
       return;
     }
 
-    qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"]; //byHRJUN
+    console.log("##QRCodeStyling... mode:", this._options.qrOptions.mode);
+    if (this._options.qrOptions.mode == "Byte") {
+      qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"]; //byHRJUN
+    }
 
     this._qr = qrcode(this._options.qrOptions.typeNumber, this._options.qrOptions.errorCorrectionLevel);
     this._qr.addData(this._options.data, this._options.qrOptions.mode || getMode(this._options.data));

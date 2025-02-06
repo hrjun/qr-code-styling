@@ -126,9 +126,9 @@ export default class QRCodeStyling {
       return;
     }
 
-    console.log("##QRCodeStyling... mode:", this._options.qrOptions.mode);
+    //Byte인 경우 UTF-8로 설정
     if (this._options.qrOptions.mode == "Byte") {
-      qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"]; //byHRJUN
+      qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];
     }
 
     this._qr = qrcode(this._options.qrOptions.typeNumber, this._options.qrOptions.errorCorrectionLevel);

@@ -3,8 +3,8 @@
 
 JavaScript library for generating QR codes with a logo and styling.
 
-**IT'S NOT A PUBLIC VERSION!**
-**JUST CHANGE THE 'qrcode.stringToBytes with UTF-8 in QRCodeStyling'**
+### ** IT'S NOT A PUBLIC VERSION! **
+
 
 Try it here https://qr-code-styling.com
 
